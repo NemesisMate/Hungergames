@@ -1,6 +1,8 @@
 package me.minebuilders.hg.managers;
 
 import java.util.ArrayList;
+
+import org.bukkit.ChatColor;
 import org.bukkit.DyeColor;
 import org.bukkit.configuration.Configuration;
 import org.bukkit.enchantments.Enchantment;
@@ -96,12 +98,14 @@ public class ItemStackManager {
 					}
 				} catch (Exception e) {}
 			} else if (s.startsWith("name:")) {
-				s = s.replace("name:", "").replace("&", "§").replace("_", " ");
+				s = s.replace("name:", "").replace("_", " ");
+				s = ChatColor.translateAlternateColorCodes('&', s);
 				ItemMeta im = item.getItemMeta();
 				im.setDisplayName(s);
 				item.setItemMeta(im);
 			} else if (s.startsWith("lore:")) {
-				s = s.replace("lore:", "").replace("&", "§").replace("_", " ");
+				s = s.replace("lore:", "").replace("_", " ");
+				s = ChatColor.translateAlternateColorCodes('&', s);
 				ItemMeta meta = item.getItemMeta();
 				ArrayList<String> lore = new ArrayList<String>();
 				for (String w : s.split(":")) 
