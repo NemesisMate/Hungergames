@@ -28,7 +28,6 @@ public class TimerTask implements Runnable {
 			int asd = Integer.valueOf(this.remainingtime % 60);
 			if (minutes != 0) game.msgAll(ChatColor.GREEN+"The game is ending in " + minutes + (asd == 0?" minute(s)!":" minute(s), and " + asd+" seconds!"));
 			else game.msgAll(ChatColor.GREEN+"The game is ending in " + this.remainingtime +" seconds!");
-
 		}
 	}
 }
