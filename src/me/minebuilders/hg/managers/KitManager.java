@@ -10,7 +10,7 @@ import org.bukkit.entity.Player;
 
 public class KitManager {
 
-	public HashMap<String, KitEntry> kititems = new HashMap<String, KitEntry>();
+	public Map<String, KitEntry> kititems = new TreeMap<>(String.CASE_INSENSITIVE_ORDER);
 	
 	public void setkit(Player p, String path) {
 		if (!kititems.containsKey(path)) {
