@@ -16,7 +16,7 @@ public class InventoryManager {
 	public class PlayerData {
 		ItemStack[] inv;
 		ItemStack[] equip;
-		//int xp; // Not working well
+		//int xp; // Not working well, essentials have a good way, could copy
 		Scoreboard sb;
 		
 		public PlayerData(Player player){
