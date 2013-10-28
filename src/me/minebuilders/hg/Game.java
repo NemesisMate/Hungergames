@@ -349,7 +349,7 @@ public class Game {
 				sb.restoreSB(p);
 				i = s;
 				exit(p);
-				HG.inv.restoreinv(p);
+				HG.inv.restoreData(p);
 			}
 		}
 		players.clear();
@@ -375,7 +375,7 @@ public class Game {
 		unFreeze(p);
 		heal(p);
 		exit(p);
-		HG.inv.restoreinv(p);
+		HG.inv.restoreData(p);
 		if (status == Status.RUNNING || status == Status.BEGINNING) {
 			if (players.size() <= 1) {
 				stop();
